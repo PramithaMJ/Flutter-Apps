@@ -6,17 +6,29 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Center(
-          child: Container(
-        width: 200,
-        height: 200,
-        decoration: const BoxDecoration(
-            color: Colors.green,
-            borderRadius: BorderRadius.only(
-                topRight: Radius.circular(50),
-                bottomLeft: Radius.circular(50))),
-        child: const Center(
-          child: Text(
+      body: SizedBox(
+        child: Container(
+          decoration: BoxDecoration(
+            color: const Color.fromARGB(255, 121, 22, 104),
+            border: Border.all(
+              color: Colors.black26,
+              width: 5,
+            ),
+            borderRadius: const BorderRadius.only(
+              bottomLeft: Radius.circular(50),
+              topRight: Radius.circular(50),
+            ),
+            // borderRadius: BorderRadius.only(
+            //     topRight: Radius.circular(50),
+            //     bottomLeft: Radius.circular(50))
+          ),
+          transform: Matrix4.rotationZ(-0.2),
+          margin: const EdgeInsets.only(
+            top: 100,
+            left: 50,
+          ),
+          padding: const EdgeInsets.all(20),
+          child: const Text(
             'Hello',
             style: TextStyle(
               color: Colors.white,
@@ -26,7 +38,7 @@ class HomePage extends StatelessWidget {
             textAlign: TextAlign.center,
           ),
         ),
-      )),
+      ),
     );
   }
 }
