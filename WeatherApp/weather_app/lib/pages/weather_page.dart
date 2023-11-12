@@ -15,12 +15,10 @@ class _WeatherPageState extends State<WeatherPage> {
   // api key
   final _weatherService = WeatherService('c03c924e3da1c1b00cda5f17975299c8');
   Weather? _weather;
-
   //fetch weather
   _fetchWeather() async {
     // get the current city
     String cityName = await _weatherService.getCurrentCity();
-
     // get the current weather
     try {
       final weather = await _weatherService.getWeather(cityName);
@@ -35,6 +33,24 @@ class _WeatherPageState extends State<WeatherPage> {
   }
 
   // weather animation
+  _getWeatherAnimation() {
+    if (_weather == null) {
+      return 'assets/animations/loading.json';
+    } else {
+      switch (_weather!.mainCondition) {
+        case 'Clear':
+          return 'assets/animations/clear.json';
+        case 'Clouds':
+          return 'assets/animations/cloudy.json';
+        case 'Rain':
+          return 'assets/animations/rainy.json';
+        case 'Snow':
+          return 'assets/animations/snow.json';
+        default:
+          return 'assets/animations/cloudy.json';
+      }
+    }
+  }
 
   // init state
   @override
