@@ -6,25 +6,27 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('My flutter App'),
-        leading: const Icon(Icons.menu),
-        actions: const [
-          Icon(Icons.shopping_cart),
-          SizedBox(width: 10),
-          Icon(Icons.logout),
-          SizedBox(
-            width: 10,
-          )
-        ],
-      ),
-      body: const Text(
-        'Proacademy',
-        style: TextStyle(
-          color: Colors.blue,
-          fontSize: 48,
+      body: Center(
+          child: Container(
+        width: 200,
+        height: 200,
+        decoration: const BoxDecoration(
+            color: Colors.green,
+            borderRadius: BorderRadius.only(
+                topRight: Radius.circular(50),
+                bottomLeft: Radius.circular(50))),
+        child: const Center(
+          child: Text(
+            'Hello',
+            style: TextStyle(
+              color: Colors.white,
+              fontSize: 32,
+              fontWeight: FontWeight.w600,
+            ),
+            textAlign: TextAlign.center,
+          ),
         ),
-      ),
+      )),
     );
   }
 }
