@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:session7/cloumn_exercise.dart';
 //import 'package:session7/home_page.dart';
 //import 'package:session7/home_page2.dart';
 //import 'package:session7/image_explain/asset_image_page.dart';
-import 'package:session7/image_explain/network_image_url.dart';
+//import 'package:session7/image_explain/network_image_url.dart';
 
 void main() {
   runApp(const MyApp());
@@ -17,7 +18,7 @@ class MyApp extends StatelessWidget {
     return const MaterialApp(
       title: 'My Second Flutter App',
       debugShowCheckedModeBanner: false,
-      home: NetworkImagePage(),
+      home: ColumnExercise(),
     );
   }
 }
