@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:session7/cloumn_exercise.dart';
+//import 'package:session7/cloumn_exercise.dart';
+import 'package:session7/row_example.dart';
 //import 'package:session7/home_page.dart';
 //import 'package:session7/home_page2.dart';
 //import 'package:session7/image_explain/asset_image_page.dart';
@@ -18,7 +19,7 @@ class MyApp extends StatelessWidget {
     return const MaterialApp(
       title: 'My Second Flutter App',
       debugShowCheckedModeBanner: false,
-      home: ColumnExercise(),
+      home: RowExample(),
     );
   }
 }
