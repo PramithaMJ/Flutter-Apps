@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:session11/pages/first_page.dart';
+import 'package:session11/nameRoute/firstpageNav.dart';
+import 'package:session11/nameRoute/secondpageNav.dart';
+//import 'package:session11/pages/first_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -11,9 +13,12 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: FirstPage(),
+      routes: {
+        'firstpage': (context) => const FirstPageNav(),
+        'secondpage': (context) => const SecondPageNav()
+      },
     );
   }
 }
